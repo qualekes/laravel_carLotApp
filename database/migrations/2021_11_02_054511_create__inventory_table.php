@@ -28,6 +28,7 @@ class CreateInventoryTable extends Migration
             $table->string('TRANSMISSION',50);
             $table->date('PURCHASE_DATE');
             $table->date('SALE_DATE');
+          
 
 
 

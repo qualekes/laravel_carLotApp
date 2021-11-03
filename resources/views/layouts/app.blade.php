@@ -3,37 +3,32 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Mike's Car-Lot</title>
-   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+   <title>CarLot</title>
 </head>
 <body class="bg-gray-100">
-
-               {{-- START OF NAVIGATION --}}
-
-<nav class="p-8 bg-white flex justify-between">
-                 {{-- LEFT NAV START --}}
+  
+<nav class="p-8 sticky top-0   bg-white flex justify-between">
+           
       <ul class="flex items-center">
          <li>
-            <a class="font-bold	bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white   text-lg p-3" href="">Home</a>
+            <a class="font-bold	bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white   text-lg p-3" href="{{env('app_url')}}/submitcar">Home</a>
          </li>
          <li>
-            <a class="p-3 bg-transparent hover:bg-blue-500 hover:text-white" href="">About</a>
+            <a class="p-3 bg-transparent hover:bg-blue-500 hover:text-white" href="{{env('app_url')}}/about">About</a>
          </li>
          <li>
-            <a class="p-3  bg-transparent hover:bg-blue-500 hover:text-white" href="">Submit Car</a>
+            <a class="p-3  bg-transparent hover:bg-blue-500 hover:text-white" href="{{env('app_url')}}/submitcar">Submit Car</a>
          </li>
            <li>
-            <a class="p-3  bg-transparent hover:bg-blue-500 hover:text-white" href="">View Inventory</a>
+            <a class="p-3  bg-transparent hover:bg-blue-500 hover:text-white" href="{{env('app_url')}}/viewinventory">View Inventory</a>
          </li>
       </ul>
-                   {{-- LEFT NAV END --}}
-
-                   {{-- RIGHT NAV START --}}
+                  
       <ul class="flex items-center">
          <li>
-            <a class="p-3  bg-transparent hover:bg-blue-500 hover:text-white" href="">Mike</a>
+            <a class="p-3 hidden  bg-transparent hover:bg-blue-500 hover:text-white" href="">Mike</a>
          </li>
          <li>
             <a class="p-3 bg-transparent hover:bg-blue-500 hover:text-white" href="">Login</a>
@@ -44,22 +39,19 @@
          <ul class="flex items-center">
        
          <li>
-            <a class="p-3 bg-transparent hover:bg-blue-500 hover:text-white" href="">Logout</a>
+            <a class="p-3 hidden bg-transparent hover:bg-blue-500 hover:text-white" href="">Logout</a>
          </li>
       </ul>
       </ul>
-                      {{-- RIGHT NAV END --}}
+                      
     </nav>
-     {{-- END OF NAVIGATION --}}
+ 
 
 
+   @yield('content')
 
-
-
-   
-        <!-- Foooter -->
-<section fixed bottom-0 w-ful class=" fixed bottom-0 w-full bg-white">
-    <div class="max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
+   <section  class=" mt-50 bottom-0 w-full bg-gray-100">
+    <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8">
         <nav class="flex flex-wrap justify-center -mx-5 -my-2">
             <div class="px-5 py-2">
                 <a href="#" class="text-base leading-6 text-gray-500 hover:text-gray-900">
@@ -92,7 +84,7 @@
                 </a>
             </div>
         </nav>
-        <div class="flex justify-center mt-8 space-x-6">
+        <div class="flex justify-center mt-2 space-x-6">
             <a href="#" class="text-gray-400 hover:text-gray-500">
                 <span class="sr-only">Facebook</span>
                 <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
@@ -129,6 +121,5 @@
         </p>
     </div>
 </section>
-   
 </body>
 </html>

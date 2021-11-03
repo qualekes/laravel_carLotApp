@@ -14,6 +14,31 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/', function () {
-    return view('app');
+Route::get('/submit', function () {
+    return view('pages.submitcar');
 });
+
+
+Route::get('/about', function () {
+    return view('pages.about');
+});
+
+Route::get('/viewinventory', function () {
+    return view('pages.viewinventory');
+});
+
+Route::get('/submitcar', function () {
+    return view('pages.submitcar');
+});
+
+
+
+Route::get('/pages', function () {
+    return view('pages.index');
+});
+
+
+
+
+
+
