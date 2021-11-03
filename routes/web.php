@@ -18,6 +18,10 @@ Route::get('/submit', function () {
     return view('pages.submitcar');
 });
 
+Route::get('/', function () {
+    return view('pages.submitcar');
+});
+
 
 Route::get('/about', function () {
     return view('pages.about');
