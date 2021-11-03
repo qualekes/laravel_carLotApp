@@ -11,7 +11,7 @@
 </div>
 <div class="mb-20 pb-80">
     <div class="flex justify-center">
-        <div class="w-8/12 mt-40 bg-white p-6 rounded-lg">
+        <div class="w-8/12 mt-10 bg-white p-6 rounded-lg">
             <h1>Insert Table</h1>
         </div>
     </div>

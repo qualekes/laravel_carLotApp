@@ -13,33 +13,42 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/','CarController@index');
 
-Route::get('/submit', function () {
-    return view('pages.submitcar');
-});
-
-Route::get('/', function () {
-    return view('pages.submitcar');
-});
-
-
-Route::get('/about', function () {
-    return view('pages.about');
-});
-
-Route::get('/viewinventory', function () {
-    return view('pages.viewinventory');
-});
-
-Route::get('/submitcar', function () {
-    return view('pages.submitcar');
-});
+Route::get('/submitcar','CarController@submit');
+Route::get('/about','CarController@about');
+Route::get('/viewinventory','CarController@viewinventory');
 
 
 
-Route::get('/pages', function () {
-    return view('pages.index');
-});
+
+
+// Route::get('/submit', function () {
+//     return view('pages.submitcar');
+// });
+
+// Route::get('/', function () {
+//     return view('pages.submitcar');
+// });
+
+
+// Route::get('/about', function () {
+//     return view('pages.about');
+// });
+
+// Route::get('/viewinventory', function () {
+//     return view('pages.viewinventory');
+// });
+
+// Route::get('/submitcar', function () {
+//     return view('pages.submitcar');
+// });
+
+
+
+// Route::get('/pages', function () {
+//     return view('pages.index');
+// });
 
 
 
