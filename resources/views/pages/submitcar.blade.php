@@ -16,6 +16,15 @@
        
         <div class="w-8/12 mt-5 p-6 rounded-lg">
             <h1 class="  text-2xl text-center	">Submit A Car</h1>
+            {{-- <strong>Database Connected: </strong>
+<?php
+    try {
+        \DB::connection()->getPDO();
+        echo \DB::connection()->getDatabaseName();
+        } catch (\Exception $e) {
+        echo 'None';
+    }
+?> --}}
         </div>
     </div>
 </div>
@@ -27,7 +36,7 @@
         <div class="w-8/12 mt-20 bg-white p-6 rounded-lg">
             <form action="">
 
-               
+
             </form>
         </div>
     </div>
