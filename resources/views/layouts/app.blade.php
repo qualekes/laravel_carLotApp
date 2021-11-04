@@ -13,7 +13,7 @@
            
       <ul class="flex items-center">
          <li>
-            <a class="font-bold	bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white   text-lg p-3" href="{{env('app_url')}}/submitcar">Home</a>
+            <a class="font-bold	bg-transparent hover:bg-blue-500 text-blue-500 hover:text-white   text-lg p-3" href="{{env('app_url')}}/submitcar">Home</a>
          </li>
          <li>
             <a class="p-3 bg-transparent hover:bg-blue-500 hover:text-white" href="{{env('app_url')}}/about">About</a>
