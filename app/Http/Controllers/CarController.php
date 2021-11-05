@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
 use Illuminate\Http\Request;
 use App\Models\Car;
+use Illuminate\Support\Facades\DB;
 
 
 class CarController extends Controller
@@ -31,53 +30,30 @@ class CarController extends Controller
     
     public function viewinventory()
     {
-       return view('pages.viewinventory');
+        $data = DB::table('cars')->paginate(5);
+       
+       return view('pages.viewinventory',['data' =>$data]);
     }
     
     
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        
-    }
+  
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store()
-    {
-    
-    }
-
+   
     /**
      * Display the specified resource.
      *
      * @param  \App\Models\Car  $car
      * @return \Illuminate\Http\Response
      */
-    public function show(Car $car)
-    {
-        //
-    }
+    // public function show()
+    // {
+    //     // return Car::all();
+       
+    // //    return view('viewinventory', ['cars' => $data]);
+    // }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Car  $car
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Car $car)
-    {
-        //
-    }
+  
 
     /**
      * Update the specified resource in storage.

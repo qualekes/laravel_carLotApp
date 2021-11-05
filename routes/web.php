@@ -19,8 +19,9 @@ Route::get('/submitcar','CarController@submit');
 Route::get('/about','CarController@about');
 Route::get('/viewinventory','CarController@viewinventory');
 
+Route::post('/viewinventory',[CarController::class, 'addData']);
+// Route::get('/viewinventory',[CarController::class, 'show']);
 
-Route::post('/viewinventory',[CarController::class,'addData']);
 // Route::resource('viewinventory','use App\Http\Controllers\CarController
 // ');
 
