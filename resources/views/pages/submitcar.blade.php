@@ -64,7 +64,7 @@
 
 
                 </div>
-                    <button type="submit" class="block w-full rounded bg-gray-100 py-3 text-blue-700 font-bold shadow">Submit</button>
+                    <button type="submit" class="block w-full hover:bg-blue-200 hover:text-white  rounded bg-gray-100 py-3 text-blue-700 font-bold shadow">Submit</button>
             </form>
            </div> 
         </div>

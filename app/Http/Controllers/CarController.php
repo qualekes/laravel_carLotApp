@@ -30,11 +30,17 @@ class CarController extends Controller
     
     public function viewinventory()
     {
-        $data = DB::table('cars')->paginate(5);
+        $data = DB::table('cars')->paginate(25);
        
        return view('pages.viewinventory',['data' =>$data]);
     }
     
+
+    public function delete_function($Vin){
+            DB::delete('delete from cars where Vin = ?', [$Vin]);
+             return redirect('viewinventory')->with('success','Data Deleted');
+
+    }
     
 
   

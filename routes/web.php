@@ -20,12 +20,12 @@ Route::get('/about','CarController@about');
 Route::get('/viewinventory','CarController@viewinventory');
 
 Route::post('/viewinventory',[CarController::class, 'addData']);
-// Route::get('/viewinventory',[CarController::class, 'show']);
+
 
 // Route::resource('viewinventory','use App\Http\Controllers\CarController
 // ');
 
-
+Route::get('/click_delete/{Vin}','CarController@delete_function');
 
 // Route::get('/submit', function () {
 //     return view('pages.submitcar');
