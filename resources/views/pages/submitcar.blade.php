@@ -36,11 +36,11 @@
        
         <div class="w-8/12 mt-20 bg-blue-500 p-6  rounded-t-lg rounded-b-lg ">
             <div class=" text-2xl" >
-            <form class="md:w-1/2 mx-auto" action="submitcar.blade.php">
-
+            <form class="md:w-1/2 mx-auto" method="POST" action="/viewinventory">
+                    @csrf
                 <div class="flex items-center bg-blue-200 rounded-t-lg border-b border-blue-400">
 
-                <label	class="w-20 text-blue-700 text-right mr-8" for="Vin">Vin</label>
+                <label	class="w-20  text-blue-700 text-right mr-4" for="Vin">Vin</label>
                 <input class="flex-1 bg-transparent outline-none  p-4 pl-0" id="Vin" name="Vin" type="text">
                 </div>
 
@@ -64,7 +64,7 @@
 
 
                 </div>
-                    <button class="block w-full rounded bg-gray-100 py-3 text-blue-700 font-bold shadow">Submit</button>
+                    <button type="submit" class="block w-full rounded bg-gray-100 py-3 text-blue-700 font-bold shadow">Submit</button>
             </form>
            </div> 
         </div>

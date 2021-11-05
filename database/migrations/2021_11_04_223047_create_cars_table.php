@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTheLotTable extends Migration
+class CreateCarsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateTheLotTable extends Migration
      */
     public function up()
     {
-        Schema::create('the_lot', function (Blueprint $table) {
+        Schema::create('cars', function (Blueprint $table) {
             $table->string('Vin')->primary();
             $table->string('Make',50);
             $table->string('Model',50);
             $table->string('Color',50);
-          
-            
         });
     }
 
@@ -30,6 +28,6 @@ class CreateTheLotTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('the_lot');
+        Schema::dropIfExists('cars');
     }
 }

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\CarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +20,9 @@ Route::get('/about','CarController@about');
 Route::get('/viewinventory','CarController@viewinventory');
 
 
+Route::post('/viewinventory',[CarController::class,'addData']);
+// Route::resource('viewinventory','use App\Http\Controllers\CarController
+// ');
 
 
 

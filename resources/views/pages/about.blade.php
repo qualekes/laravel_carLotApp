@@ -6,10 +6,10 @@
          <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
     <div class="text-center pb-12">
         <h2 class="text-base font-bold text-blue-500">
-            We have the best equipment in the market
+            We have the best lot in the market !
         </h2>
         <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
-            Check our awesome team members
+            Check our awesome team memberss
         </h1>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

@@ -12,7 +12,12 @@
 <div class="mb-20 pb-80">
     <div class="flex justify-center">
         <div class="w-8/12 mt-10 bg-white p-6 rounded-lg">
-            <h1>Insert Table</h1>
+            <table>
+                <td>VIN</td>
+                <td>Make</td>
+                <td>Model</td>
+                <td>Color</td>
+            </table>
         </div>
     </div>
 </div>

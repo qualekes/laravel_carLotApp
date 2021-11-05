@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Inventory;
+
 use Illuminate\Http\Request;
+use App\Models\Car;
+
 
 class CarController extends Controller
 {
@@ -24,12 +26,14 @@ class CarController extends Controller
    public function about()
     {
        return view('pages.about');
+ 
     }
     
     public function viewinventory()
     {
        return view('pages.viewinventory');
     }
+    
     
 
     /**
@@ -39,7 +43,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -48,18 +52,18 @@ class CarController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
+    
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Inventory  $inventory
+     * @param  \App\Models\Car  $car
      * @return \Illuminate\Http\Response
      */
-    public function show(Inventory $inventory)
+    public function show(Car $car)
     {
         //
     }
@@ -67,10 +71,10 @@ class CarController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Inventory  $inventory
+     * @param  \App\Models\Car  $car
      * @return \Illuminate\Http\Response
      */
-    public function edit(Inventory $inventory)
+    public function edit(Car $car)
     {
         //
     }
@@ -79,10 +83,10 @@ class CarController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Inventory  $inventory
+     * @param  \App\Models\Car $car
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Inventory $inventory)
+    public function update(Request $request, Car $car)
     {
         //
     }
@@ -90,11 +94,22 @@ class CarController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Inventory  $inventory
+     * @param  \App\Models\Car $car
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Inventory $inventory)
+    public function destroy(Car $car)
     {
         //
+    }
+
+    function addData(Request $req) 
+    {
+        $car = new Car;
+        $car->Vin=$req->Vin;
+        $car->Make=$req->Make;
+        $car->Model=$req->Model;
+        $car->Color=$req->Color;
+        $car->save();
+        return redirect('viewinventory');
     }
 }
